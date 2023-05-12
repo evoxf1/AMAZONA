@@ -10,7 +10,7 @@ export const sampleProducts: Product[] = [
     price: 120,
     countInStock: 10,
     description: "high quality shirt",
-    rating: 4.5,
+    rating: 1.5,
     numReviews: 10,
   },
   {
@@ -20,7 +20,7 @@ export const sampleProducts: Product[] = [
     category: "Shirts",
     brand: "Adidas",
     price: 150,
-    countInStock: 10,
+    countInStock: 0,
     description: "super quality shirt",
     rating: 3.5,
     numReviews: 19,
