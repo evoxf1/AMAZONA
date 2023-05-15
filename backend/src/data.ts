@@ -1,4 +1,7 @@
-import { Product } from "./types/Product";
+import { User } from "./models/userModel";
+import { Product } from "./models/productModel";
+import bcrypt from 'bcryptjs'
+
 
 export const sampleProducts: Product[] = [
   {
@@ -49,5 +52,19 @@ export const sampleProducts: Product[] = [
     rating: 5,
     numReviews: 10,
   }
-
+ 
 ];
+export const sampleUsers: User[] = [
+  {
+    name: 'Amit',
+    email: 'admin@example.com',
+    password: bcrypt.hashSync('123456'),
+    isAdmin: true,
+  },
+  {
+    name: 'Sumit',
+    email: 'user@example.com',
+    password: bcrypt.hashSync('123456'),
+    isAdmin: false,
+  },
+]

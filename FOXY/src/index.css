@@ -16,4 +16,7 @@
 }
 img.large{
   max-width: 100%;
-}
+} 
+img.thumbnail{
+  max-width: 80px;
+} 
