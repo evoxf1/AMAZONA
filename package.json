@@ -1,8 +1,29 @@
 {
   "dependencies": {
+    "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "bootstrap": "^5.2.3",
     "react-bootstrap": "^2.7.4",
+    "react-router": "^5.3.4",
     "react-router-dom": "^6.11.1"
-  }
+  },
+  "name": "ts",
+  "description": "FOXY shopping app documentation\r added the first commit first time tot the repository",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm --force install  && npm run build  && cd ../foxy && npm install && npm run build",
+    "start": "TG_ALLOW_MIXED=ALLOW  node backend/build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evoxf1/FOXY.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evoxf1/FOXY/issues"
+  },
+  "homepage": "https://github.com/evoxf1/FOXY#readme"
 }

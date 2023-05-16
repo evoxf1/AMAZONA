@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type CartItem = {
     image:string | undefined
     slug: string
@@ -15,13 +16,14 @@ export type ShippingAddress ={
      postalCode: string
 
 }
+
 export type Cart  ={
     cartItems: any
     itemsPrice:number
     shippingPrice:number
     taxPrice:number
     totalPrice:number
-    cartItmes: CartItem[]
+    // cartItmes: CartItem[]
     shippingAddress: ShippingAddress
     paymentMethod:string 
 }

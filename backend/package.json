@@ -22,8 +22,10 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@typegoose/typegoose": "^11.1.0",
+    "@bambora/checkout-sdk-web": "^3.0.7",
+    "@typegoose/typegoose": "^11.2.0-beta.1",
     "@types/express": "^4.17.17",
+    "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
