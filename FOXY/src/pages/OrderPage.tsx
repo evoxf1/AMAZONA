@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
   PayPalButtons,
   PayPalButtonsComponentProps,
   SCRIPT_LOADING_STATE,
   usePayPalScriptReducer,
 } from '@paypal/react-paypal-js'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { Button, Card, Col, ListGroup, Row } from 'react-bootstrap'
 import { Helmet } from 'react-helmet-async'
 import { Link, useParams } from 'react-router-dom'
@@ -18,11 +18,13 @@ import {
   useGetPaypalClientIdQuery,
   usePayOrderMutation,
 } from '../hooks/orderHooks'
-// import { Store } from '../Store'
+import { Store } from '../Store'
 import { ApiError } from '../types/ApiError'
 import { getError } from '../utils'
 
 export default function OrderPage() {
+  const { state } = useContext(Store)
+  const { userInfo } = state
 
   const params = useParams()
   const { id: orderId } = params
@@ -67,7 +69,7 @@ export default function OrderPage() {
 
   const paypalbuttonTransactionProps: PayPalButtonsComponentProps = {
     style: { layout: 'vertical' },
-    createOrder(actions) {
+    createOrder(_data, actions) {
       return actions.order
         .create({
           purchase_units: [
@@ -82,8 +84,8 @@ export default function OrderPage() {
           return orderID
         })
     },
-    onApprove(actions) {
-      return actions.orderID.capture().then(async (details:any) => {
+    onApprove(_data, actions) {
+      return actions.order!.capture().then(async (details) => {
         try {
           await payOrder({ orderId: orderId!, ...details })
           refetch()
