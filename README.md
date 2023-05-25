@@ -1,5 +1,4 @@
-FOXY shopping app documentation
-added the first commit first time tot the repository
+FOXY shopping app with paytm payments gateway
 
 
 
