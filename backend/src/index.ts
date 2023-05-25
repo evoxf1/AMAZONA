@@ -53,9 +53,9 @@ import keyRouter from "./routers/keyRouter";
 app.use("/api/keys", keyRouter)
 
 
-app.use(express.static(path.join(__dirname, '../foxy/dist')))
+app.use(express.static(path.join(__dirname, '../../foxy/dist')))
 app.get('*', (req: Request, res: Response) =>
-  res.sendFile(path.join(__dirname, '../foxy/dist/index.html'))
+  res.sendFile(path.join(__dirname, '../../foxy/dist/index.html'))
 )
 
 const PORT: number = parseInt((process.env.PORT || '4000') as string, 10)
