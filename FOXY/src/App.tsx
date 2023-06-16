@@ -59,7 +59,7 @@ function App() {
           <div className="d-flex justify-content-between align-items-center">
             {" "}
             <LinkContainer to="/" className="header-link">
-              <Navbar.Brand>🦊foxy</Navbar.Brand>
+              <Navbar.Brand>Amazona</Navbar.Brand>
             </LinkContainer>
             <Form className="flex-grow-1 d-flex me-auto">
               <InputGroup>
@@ -67,8 +67,8 @@ function App() {
                   type="text"
                   name="q"
                   id="q"
-                  placeholder="Search foxy"
-                  aria-label="Search foxy"
+                  placeholder="Search amazona"
+                  aria-label="Search amazona"
                   aria-describedby="button-search"
                 ></FormControl>
                 <Button
